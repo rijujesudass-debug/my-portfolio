@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+
+    <style>
+
+/* Services Section */
+
+.services {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #1e293b;
+    padding: 35px 25px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    font-size: 40px;
+}
+
+.service-card h3 {
+    color: #60a5fa;
+    font-size: 22px;
+}
+
+.service-card p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Skill Tags */
+
+.skill-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.skill-tags span {
+    background-color: #334155;
+    color: #93c5fd;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.about-image {
+    background-color: #1e293b;
+    padding: 40px 25px;
+    border-radius: 18px;
+    border: 1px solid #334155;
+    flex: 1;
+    text-align: center;
+}
+
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+        
+/* Professional Homepage */
+
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.intro {
+    color: #60a5fa;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: white;
+    margin: 20px 0;
+}
+
+.description {
+    font-size: 20px;
+    color: #cbd5e1;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-secondary {
+    border: 2px solid #64748b;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary:hover {
+    background-color: #334155;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 17px;
+    }
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        margin: 0 8px;
+    }
+}
+
+        body {
+            background-color: #101827;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            color: #60a5fa;
+            font-size: 40px;
+        }
+
+        h2 {
+            color: #facc15;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        /* Featured Projects */
+.projects {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 850px;
+    margin: 28px auto 0;
+}
+
+.project-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 28px 20px;
+}
+
+.project-icon {
+    font-size: 32px;
+}
+
+.project-card h3 {
+    color: #60a5fa;
+}
+
+.project-skills span {
+    display: inline-block;
+    margin: 4px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: #334155;
+    color: #bfdbfe;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: #60a5fa;
+    color: #0f172a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Section */
+
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #facc15;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact-description {
+    color: #cbd5e1;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.contact-form label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    background-color: #0f172a;
+    color: white;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #60a5fa;
+    border-color: #60a5fa;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Restaurant project button */
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #60a5fa;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    background: #3b82f6;
+    color: white;
+}
+    </style>
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">My Portfolio</div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+   
+<section class="hero" id="home">
+    <p class="intro">WELCOME TO MY PORTFOLIO</p>
+
+    <h1>Hi, I'm a Web Developer</h1>
+
+    <p class="description">
+        I create modern, responsive, and beautiful
+        websites for businesses and individuals.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">
+            View My Work
+        </a>
+
+        <a href="#contact" class="btn-secondary">
+            Contact Me
+        </a>
+    </div>
+</section>
+
+
+<section class="about" id="about">
+    <p class="intro">GET TO KNOW ME</p>
+    <h2>About Me</h2>
+
+    
+<div class="about-container">
+
+<div class="about-image">
+    <div class="icon-circle">💻</div>
+
+    <h3>Web Development</h3>
+    <p>HTML • CSS • JavaScript</p>
+
+    <div class="skill-tags">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+    </div>
+</div>
+
+
+        <div class="about-text">
+            <h3>Hello! I'm an aspiring Web Developer.</h3>
+            <p>
+                I'm learning to create modern and
+                responsive websites using HTML,
+                CSS, and JavaScript.
+            </p>
+            <p>
+                My goal is to help businesses create
+                a strong online presence.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+
+<section class="services" id="services">
+    <p class="intro">WHAT I OFFER</p>
+    <h2>My Services</h2>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Web Design</h3>
+            <p>Clean and attractive website designs for businesses.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Responsive Websites</h3>
+            <p>Websites that work on mobile, tablet, and desktop.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Website Development</h3>
+            <p>Building websites using HTML, CSS, and JavaScript.</p>
+        </div>
+
+    </div>
+</section>
+<section class="projects" id="projects">
+    <p class="intro">MY PORTFOLIO</p>
+    <h2>Featured Projects</h2>
+
+    <div class="projects-container">
+        <div class="project-card">
+            <div class="project-icon">💻</div>
+            <h3>Portfolio Website</h3>
+            <p>My first website built with HTML and CSS.</p>
+            <div class="project-skills">
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+            <a href="#home" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">🍔</div>
+            <h3>Restaurant Website</h3>
+<p>
+  A modern, responsive restaurant website featuring
+  a food menu, reservation form, and elegant design.
+</p>
+            <div class="project-skills">
+               <span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+            </div>
+        
+    <a href="https://rijujesudass-debug.github.io/golden-plate-restaurant/"
+   class="project-link"
+   target="_blank"
+   rel="noopener noreferrer">
+    View Live Website
+    </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <p class="intro">GET IN TOUCH</p>
+    <h2>Contact Me</h2>
+
+    <p class="contact-description">
+        Have a project in mind?
+        Let's work together!
+    </p>
+
+    <form class="contact-form" id="contact-form">
+
+        <label for="name">Your Name</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+        >
+
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <label for="message">Your Message</label>
+        <textarea
+            id="message"
+            rows="5"
+            placeholder="Tell me about your project..."
+            required
+        ></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+    <script>
+        function showMessage() {
+            alert("Thank you for visiting my website!");
+        }
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const recipient = "rijujesudass@gmail.com";
+
+    const subject = "Website Enquiry from " + name;
+    const body = "Name: " + name +
+                 "\nEmail: " + email +
+                 "\n\nMessage:\n" + message;
+
+    window.location.href = "mailto:" + recipient +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+});
+
+
+    </script>
+</body>
+</html>
