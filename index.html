@@ -258,7 +258,7 @@ nav {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0,1fr));
     gap: 24px;
     max-width: 850px;
     margin: 28px auto 0;
@@ -394,6 +394,23 @@ nav {
     background: #3b82f6;
     color: white;
 }
+
+.project-tech {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.project-tech span {
+  background: #334155;
+  color: #93c5fd;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
     </style>
 
 </head>
@@ -534,29 +551,68 @@ nav {
     </a>
     </div>
 
+
+<!-- PROJECT 3: NOVA DIGITAL AGENCY -->
 <div class="project-card">
-    <div class="project-icon">🚀</div>
-    <h3>Nova Digital Agency</h3>
 
-    <p>
-        A modern, responsive digital agency website
-        featuring services, an about section,
-        and an email contact form.
-    </p>
+  <div class="project-icon">🚀</div>
 
-    <div class="project-skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-    </div>
+  <h3>Nova Digital Agency</h3>
 
-    <a href="https://rijujesudass-debug.github.io/nova-digital/"
-       class="project-link"
-       target="_blank"
-       rel="noopener noreferrer">
-        View Live Website
-    </a>
+  <p>
+    A modern, responsive digital agency website
+    featuring services, an about section,
+    and an email contact form.
+  </p>
+
+  <div class="project-tech">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+  </div>
+
+  <a
+    href="https://rijujesudass-debug.github.io/nova-digital/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="project-btn"
+  >
+    View Live Website
+  </a>
+
 </div>
+
+
+<!-- PROJECT 4: TASKFLOW -->
+<div class="project-card">
+
+  <div class="project-icon">✅</div>
+
+  <h3>TaskFlow Dashboard</h3>
+
+  <p>
+    A professional productivity dashboard
+    featuring task management, progress
+    tracking, filters, and browser storage.
+  </p>
+
+  <div class="project-tech">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+  </div>
+
+  <a
+    href="https://rijujesudass-debug.github.io/taskflow-dashboard/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="project-btn"
+  >
+    View Live Website
+  </a>
+
+</div>
+
 
 </section>
 
