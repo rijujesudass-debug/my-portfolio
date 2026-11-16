@@ -411,6 +411,78 @@ nav {
   font-size: 14px;
 }
 
+/* DAY 7 - LESSON 3 */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Professional button interactions */
+.project-btn,
+.project-link {
+  transition: background 0.25s ease,
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.project-btn:hover,
+.project-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 4px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .project-card,
+  .project-btn,
+  .project-link {
+    transition: none;
+  }
+}
+
+/* DAY 7 - LESSON 4 */
+
+/* Improve text readability */
+.project-card p {
+  line-height: 1.7;
+}
+
+/* Make links easier to use */
+.project-btn,
+.project-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+/* Prevent long text from overflowing */
+.project-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
     </style>
 
 </head>
@@ -673,7 +745,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
-    const recipient = "rijujesudass@gmail.com";
+    const recipient = "rijujesudass19@gmail.com";
 
     const subject = "Website Enquiry from " + name;
     const body = "Name: " + name +
